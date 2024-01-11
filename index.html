@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--Header for tab title-->
+  <head>
+    <meta charset="UTF-8">
+    <title>AI Opinion Form</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <!--Main Body!-->
+  <body>
+    <div class="formholder">
+    <h1 id="title">Are you scared of AI?</h1>
+    <div class="p">
+      <p id="description">AI has been taking over many industries in the past few years. We would like to collect your thoughts about it.</p>
+    </div>
+    <form id="survey-form" action="/action_page.php" method="get">
+    <!--Collection of user identity info-->
+        <fieldset>
+          <label for="name" id="name-label"> Enter your full name: <input type="text" id="name" class="inline" placeholder="full name here" required></label>
+          <label for="email" id="email-label"> Enter your email: <input type="email" id="email" class="inline" placeholder="enter email here" required></label>
+          <label for="yrs-in-industry" id="number-label"> How many years have you been part of the tech industry? <input type="number" id="number" min="0" max="40" class="inline" placeholder="# of years"></label>
+          <label for="job-type" class="dropdown">What industry do you primarily work in?
+            <select id="dropdown">
+              <option value="" class="first-choice">(select an option)</option>
+              <option value="1">Technology</option>
+              <option value="2">Fashion</option>
+              <option value="3">Retail</option>
+              <option value="4">Finance</option>
+              <option value="5">Trade</option>
+              <option value="6">Other or N/A</option>
+            </select>
+          </label>
+        </fieldset>
+      <!--Collection of personal thoughts-->
+        <fieldset>
+        <legend>Given the following statements, which do you feel resonates with you most? (required)</legend>
+          <label for="lost" class="radio"><input type="radio" id="lost" name="scared" value="scared" checked> AI has already taken my job
+          </label>
+          <label for="soon" class="radio"><input type="radio" id="soon" name="scared" value="soon"> It seems like AI will take my job in the next few years
+          </label>
+          <label for="later" class="radio"><input type="radio" id="later" name="scared" value="later"> AI won't touch my job for a long time
+          </label>
+          <label for="never" class="radio"><input type="radio" id="never" name="scared" value="never"> AI could never take my job
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend class="last-section">Check the following that apply about your job</legend>
+          <label for="interaction" class="checkbox"><input type="checkbox" id="interaction" value="interaction"> I interact with a lot of people at my job
+          </label>
+          <label for="labor" class="checkbox"><input type="checkbox" id="labor" value="labor"> I do a lot of hard labor at my job
+          </label>
+          <label for="work-from-home" class="checkbox"><input type="checkbox" id="work-from-home" value="work-from-home"> I work from home most of the time on a computer or laptop
+          </label>
+          <label for="contractor" class="checkbox"><input type="checkbox" id="contractor" value="contractor"> I am a contractor that performs work for people when asked
+          </label>
+          <label for="na" class="checkbox"><input type="checkbox" id="na" value="na"> These options are not applicable to me
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend class="thoughtlegend">If you had selected other or not applicable in any of the options above, we would like for you to put your thoughts down.</legend>
+          <label for="thoughts">
+            <textarea id="thoughts" name="thoughts" rows=1 cols=30 placeholder="Type your thoughts here..."></textarea>
+          </label>
+        </fieldset>
+        <div class="button-holder">
+          <input type="submit" id="submit">
+        </div>
+    </form>
+    </div>
+  </body>
+</html>
